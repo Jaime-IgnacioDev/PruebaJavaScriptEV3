@@ -3,18 +3,18 @@
 <link rel="stylesheet" href="css.css"/>
   <head>
 
-    <title>Evaluación 3 Front End</title>
+    <title>Evaluacion 3 Front End</title>
   </head>
-  <body>
+  <body id="cuerpo">
     <div class="contenedor">
-    <h2 class="lead">Listado de Softwares y sus Creadores:</h2>
+    <h2 id="cabecera">Listado de Softwares y sus Creadores:</h2>
     <form>
       <input id="software" type="text" placeholder="Ingresar Software" class="form-control my-2">
       <input id="empresa" type="text" placeholder="Ingresar Empresa" class="form-control my-2">
       <input id="usuario" type="text" placeholder="Ingresar Usuario" class="form-control my-2">
       
     </form>
-    <button id="boton" type="reset" onclick="capturar();"  class="btn bnt-success">Agregar</button>
+    <button id="boton1" type="reset" onclick="capturar();"  class="btn bnt-success">Agregar</button>
     </div>
     <p> </p>
     <p> </p>
@@ -28,6 +28,7 @@
           </tr>
         </thead>
       </table>
+      <button id="boton2" class="btn bnt-info" >Cambiar</button>
 
 </div>
     <script >
@@ -55,7 +56,17 @@
         basedatos.push(listado)
         console.log(basedatos);
         document.getElementById("tabla").innerHTML += '<tbody><td>'+listado.software+'</td><td>'+listado.empresa+'</td><td>'+listado.usuario+'</td></tbody>';
-      };
+
+    var body=document.getElementById("cuerpo");
+        console.log(body.innerHTML);
+    var h2=document.getElementById("cabecera");
+        console.log(h2.innerHTML);
+    var boton=document.getElementById("boton2");
+        boton.onclick=function(){
+          body.style.background="greenyellow";
+          h2.style.color="black";
+        }
+    };
     </script>
 
   </body>
