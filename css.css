@@ -17,7 +17,7 @@ input[type=text]{
     text-align: center;
 }
 
-button{
+#boton1{
     background-color: darkgreen;
     border: 2px solid white;
     border-radius: 4px;
@@ -25,6 +25,19 @@ button{
     padding: 12px 20px;
     text-decoration: none;
     margin: auto;
+    cursor: pointer;
+    text-align: center;
+    display: grid;
+}
+
+#boton2{
+    background-color: darkgreen;
+    border: 2px solid white;
+    border-radius: 4px;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin-top: 5px;
     cursor: pointer;
     text-align: center;
     display: grid;
