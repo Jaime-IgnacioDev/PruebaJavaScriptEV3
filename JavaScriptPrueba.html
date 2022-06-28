@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<link rel="stylesheet" href="css.css"/>
+  <head>
+
+    <title>Evaluación 3 Front End</title>
+  </head>
+  <body>
+    <div class="contenedor">
+    <h2 class="lead">Listado de Softwares y sus Creadores:</h2>
+    <form>
+      <input id="software" type="text" placeholder="Ingresar Software" class="form-control my-2">
+      <input id="empresa" type="text" placeholder="Ingresar Empresa" class="form-control my-2">
+      <input id="usuario" type="text" placeholder="Ingresar Usuario" class="form-control my-2">
+      
+    </form>
+    <button id="boton" type="reset" onclick="capturar();"  class="btn bnt-success">Agregar</button>
+    </div>
+    <p> </p>
+    <p> </p>
+    <div class="contenedor 2">
+      <table class="table" id="tabla">
+        <thead class="thead-inverse">
+          <tr>
+            <th>Sofware</th>
+            <th>Empresa</th>
+            <th>Usuario</th>
+          </tr>
+        </thead>
+      </table>
+
+</div>
+    <script >
+      function capturar(){
+        console.log("capturado");
+        function Listado(software, empresa, usuario){
+          this.software=software;
+          this.empresa=empresa;
+          this.usuario=usuario;
+        }
+         capturarsoftware=document.getElementById("software").value;
+        console.log(capturarsoftware);
+         capturarempresa=document.getElementById("empresa").value;
+        console.log(capturarempresa);
+         capturarusuario=document.getElementById("usuario").value;
+        console.log(capturarusuario);
+
+
+        listado=new Listado(capturarsoftware, capturarempresa, capturarusuario);
+        
+        agregar();
+      }
+      var basedatos=[];
+      function agregar(){
+        basedatos.push(listado)
+        console.log(basedatos);
+        document.getElementById("tabla").innerHTML += '<tbody><td>'+listado.software+'</td><td>'+listado.empresa+'</td><td>'+listado.usuario+'</td></tbody>';
+      };
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,57 @@
+body{
+    background-color: royalblue;
+}
+
+h2{
+    color: snow;
+    text-align: center;
+}
+
+input[type=text]{
+    border: 2px solid darkgreen;
+    border-radius: 4px;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+button{
+    background-color: darkgreen;
+    border: 2px solid white;
+    border-radius: 4px;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin: auto;
+    cursor: pointer;
+    text-align: center;
+    display: grid;
+}
+
+th {
+    padding: 15px;
+    background-color: rgb(0, 100, 0);
+    text-align: left;
+    color: white;
+    width: auto;
+    border: 1px solid black;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    padding: 15px;
+    background-color: rgb(214, 214, 214);
+    color: darkgreen;
+    text-align: left;
+    width: auto;
+    border: 1px solid black;
+}
+form{
+    text-align: center;
+}
